@@ -7,11 +7,13 @@ import func
 
 bot = telegram.Bot(token=config.TOKEN)
 updates = bot.getUpdates()
-count = len(updates)
+func.get_last_id(updates)
+count = config.messages_id[-1]
 
 while config.last:
     updates = bot.getUpdates()
-    if count < len(updates):
+    func.get_last_id(updates)
+    if count != config.messages_id[-1]:
         func.get_last(updates)
         config.last = False
         dict.dictionary(config.messages[-1])

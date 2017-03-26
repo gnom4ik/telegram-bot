@@ -12,7 +12,7 @@ def dictionary(x):
         bot.sendMessage(chat_id=config.chat_id, text="Слушай, хватит уже!")
     elif '/start' in config.messages[-1]:
         bot.sendMessage(chat_id=config.chat_id, text="Привет, че!")
-    elif '/help' or '/?' in config.messages[-1]:
+    elif '/help' in config.messages[-1]:
         bot.sendMessage(chat_id=config.chat_id, text="Я принимаю команды только используя /. Команды выведены выше.")
     elif '/hostname' in config.messages[-1]:
         command = 'hostname'
